@@ -1,0 +1,17 @@
+.contacts {
+  width: 20%;
+  list-style: none;
+  padding: 0 20px;
+  margin: 0;
+  height: 100vh;
+  background-color: lightgrey;
+  text-align: center;
+}
+
+.contact {
+  padding: 20px 10px;
+}
+
+.contact:hover {
+  background-color: white;
+}
