@@ -1,3 +1,4 @@
+import { Route } from 'react-router-dom';
 import Contacts from './Contacts';
 import Messages from './Messages';
 
@@ -6,7 +7,9 @@ function App() {
     <div className="App">
       <div className="messeger">
         <Contacts />
-        <Messages />
+        <Route path="/:id?">
+          <Messages />
+        </Route>
       </div>
     </div>
   );
