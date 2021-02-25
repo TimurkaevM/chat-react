@@ -16,12 +16,15 @@
 }
 
 .contact:hover {
-  background-color: white;
+  background-color: ghostwhite;
   cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
 }
 
 .activeContact {
   background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .materialIcons {
