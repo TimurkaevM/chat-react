@@ -5,20 +5,41 @@
   margin: 0;
   height: 100vh;
   background-color: lightgrey;
-  text-align: center;
 }
 
 .contact {
   padding: 20px 10px;
-  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
 }
 
 .contact:hover {
-  background-color: white;
+  background-color: ghostwhite;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
 }
 
-.contact a {
-  text-decoration: none;
-  color: black;
-  font-weight: 600;
+.activeContact {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.materialIcons {
+  color: cornflowerblue;
+  font-size: 35px;
+  margin-right: 5px;
+}
+
+.circle {
+  background-color: cornflowerblue;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 100px;
+  text-align: center;
+  margin-right: 8px;
+  color: white;
 }
