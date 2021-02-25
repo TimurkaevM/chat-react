@@ -4,9 +4,9 @@ import { NavLink } from 'react-router-dom';
 
 function Contact(props) {
   return (
-    <li className={style.contact}>
-      <NavLink to={`/${props.contact._id}`}>{props.contact.fullname}</NavLink>
-    </li>
+    <NavLink to={`/${props.contact._id}`} className={style.contact}>
+      {props.contact.fullname}
+    </NavLink>
   );
 }
 

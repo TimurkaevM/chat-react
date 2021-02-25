@@ -14,11 +14,11 @@ function Contacts() {
   }, []);
 
   return (
-    <ul className={style.contacts}>
+    <div className={style.contacts}>
       {contacts.map((contact) => {
         return <Contact key={contact.id} contact={contact} />;
       })}
-    </ul>
+    </div>
   );
 }
 
