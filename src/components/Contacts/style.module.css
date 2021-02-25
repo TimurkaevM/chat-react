@@ -5,17 +5,37 @@
   margin: 0;
   height: 100vh;
   background-color: lightgrey;
-  text-align: center;
 }
 
 .contact {
   padding: 20px 10px;
-  display: block;
   text-decoration: none;
   color: black;
+  display: flex;
+  align-items: center;
 }
 
 .contact:hover {
   background-color: white;
   cursor: pointer;
+}
+
+.activeContact {
+  background-color: white;
+}
+
+.materialIcons {
+  color: cornflowerblue;
+  font-size: 35px;
+  margin-right: 5px;
+}
+
+.circle {
+  background-color: cornflowerblue;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 100px;
+  text-align: center;
+  margin-right: 5px;
 }
