@@ -1,5 +1,5 @@
 import React from 'react';
-// import style from './style.module.css';
+import style from './style.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { loadMessages } from '../../redux/messages';
 import { useEffect } from 'react';
@@ -22,9 +22,9 @@ function Messages() {
     return <div>loading messages...</div>;
   }
   return (
-    <div>
+    <div className={style.messages}>
       {messages.map((message) => {
-        return <Message key={message.id} message={message} />;
+        return <Message key={message._id} message={message} />;
       })}
     </div>
   );
