@@ -1,8 +1,16 @@
 import React from 'react';
-// import style from './style.module.css';
+import style from './style.module.css';
 
 function Message(props) {
-  return <div>{props.message.content}</div>;
+  return (
+    <div
+      className={`${style.message} ${
+        props.message.type === 'info' ? `${style.info_messages}` : ''
+      }`}
+    >
+      {props.message.content}
+    </div>
+  );
 }
 
 export default Message;
