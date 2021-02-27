@@ -43,3 +43,27 @@
   margin-right: 8px;
   color: white;
 }
+
+.greenCircle {
+  position: relative;
+  bottom: 50px;
+  left: 35px;
+  width: 10px;
+  height: 10px;
+  border-radius: 30px;
+  background-color: limegreen;
+  border: 2px solid white;
+}
+
+.form {
+  margin-bottom: 50px;
+  font-size: 16px;
+  width: 95%;
+  padding: 15px 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: gray;
+}
+
+.flex {
+  display: flex;
+}
