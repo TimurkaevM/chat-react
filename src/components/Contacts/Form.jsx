@@ -12,7 +12,7 @@ function Form(props) {
   };
 
   return (
-    <div className={style.flex}>
+    <div className={`${style.flex} ${style.inputWithIcon}`}>
       <input
         type="text"
         value={filter}
@@ -20,6 +20,7 @@ function Form(props) {
         placeholder="Search contact"
         className={style.form}
       />
+      <i className={`material-icons ${style.search}`}>search</i>
     </div>
   );
 }
