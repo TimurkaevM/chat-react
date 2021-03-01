@@ -14,6 +14,7 @@
   padding: 20px;
   margin: 10px;
   color: #fff;
+  max-width: 50%;
 }
 
 .info_messages {
@@ -22,5 +23,15 @@
   background-color: whitesmoke;
   border-radius: 20px;
   align-self: center;
+  color: #000;
+}
+
+.incoming_messages {
+  align-self: flex-start;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+  background-color: whitesmoke;
+  border-radius: 20px 20px 20px 0;
+  padding: 20px;
+  margin: 10px;
   color: #000;
 }

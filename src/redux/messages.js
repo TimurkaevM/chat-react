@@ -22,7 +22,7 @@ export default (state = initialState, action) => {
   }
 };
 
-export const loadMessages = (id) => {
+export const loadMessages = (id, myId) => {
   return (dispatch) => {
     dispatch({
       type: 'messages/load/start',
