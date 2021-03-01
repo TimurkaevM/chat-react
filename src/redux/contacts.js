@@ -1,6 +1,7 @@
 const initialState = {
   items: [],
   loading: false,
+  filter: '',
 };
 
 export default (state = initialState, action) => {
@@ -15,6 +16,12 @@ export default (state = initialState, action) => {
       return {
         ...state,
         items: action.payload,
+      };
+
+    case 'filter/set':
+      return {
+        ...state,
+        filter: action.payload,
       };
 
     default:
@@ -34,5 +41,12 @@ export const loadContacts = () => {
           payload: json,
         });
       });
+  };
+};
+
+export const setContactsFilter = (filter) => {
+  return {
+    type: 'filter/set',
+    payload: filter,
   };
 };
