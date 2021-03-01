@@ -13,10 +13,7 @@
   overflow-y: scroll;
 }
 .content {
-  width: 100%;
-  height: 100%;
   padding: 40px 10px 40px 35px;
-  box-sizing: border-box;
 }
 .user {
   text-align: center;
@@ -75,16 +72,17 @@
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  justify-content: space-between;
+  width: 45%;
 }
 .social-item:last-child {
   margin-bottom: 0;
 }
 .social-icon {
-  color: gray;
-  margin-right: 10px;
+  color: #ababab;
 }
 .media {
-  margin-top: 50px;
+  margin: 50px 0 30px;
 }
 .media-title {
   font-size: 18px;

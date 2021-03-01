@@ -11,7 +11,9 @@ function App() {
         <Route path="/:id?">
           <Messages />
         </Route>
-        <Questionnaire />
+        <Route path="/:id?">
+          <Questionnaire />
+        </Route>
       </div>
     </div>
   );
