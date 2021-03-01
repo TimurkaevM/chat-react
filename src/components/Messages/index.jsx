@@ -5,16 +5,19 @@ import { loadMessages } from '../../redux/messages';
 import { useEffect } from 'react';
 import Message from './Message';
 import { useParams } from 'react-router-dom';
+import { getUser } from '../../redux/application';
 
 function Messages() {
-  const params = useParams();
+  const params = useParams().id;
   const messages = useSelector((state) => state.messages.items);
   const loading = useSelector((state) => state.messages.loading);
+  const myId = useSelector((state) => state.application.items);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (params.id !== undefined) {
-      dispatch(loadMessages(params.id));
+    if (params !== undefined) {
+      dispatch(loadMessages(params, myId));
+      dispatch(getUser());
     }
   }, [params]);
 
