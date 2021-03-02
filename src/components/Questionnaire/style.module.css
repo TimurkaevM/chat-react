@@ -4,6 +4,7 @@
   background-color: rgb(232, 233, 239);
   overflow: hidden;
   box-sizing: border-box;
+  display: none;
 }
 .main-outside {
   width: 100%;
