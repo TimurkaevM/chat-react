@@ -1,6 +1,6 @@
 .messages {
   display: flex;
-  width: 70%;
+  max-width: 80%;
   height: 100vh;
   overflow-y: scroll;
   flex-direction: column;
