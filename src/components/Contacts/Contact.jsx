@@ -9,7 +9,9 @@ function Contact(props) {
       className={style.contact}
       activeClassName={style.activeContact}
     >
-      {/*<i className={`${style.materialIcons} material-icons md-48`}>stop_circle</i>*/}
+      <i className={`${style.materialIcons} material-icons md-48`}>
+        stop_circle
+      </i>
       <div className={style.circle}>{props.contact.fullname[0]}</div>
       <div>
         {props.contact.fullname}
