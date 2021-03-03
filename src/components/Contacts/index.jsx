@@ -19,11 +19,15 @@ function Contacts() {
   });
 
   return (
-    <div className={style.contacts} id="contacts">
-      <Form />
-      {filteredContacts.map((contact) => {
-        return <Contact key={contact._id} contact={contact} />;
-      })}
+    <div className={style.sidebar} id="contacts">
+      <div className={style.innerSidebar}>
+        <Form />
+        <div className={style.contacts}>
+          {filteredContacts.map((contact) => {
+            return <Contact key={contact._id} contact={contact} />;
+          })}
+        </div>
+      </div>
     </div>
   );
 }
