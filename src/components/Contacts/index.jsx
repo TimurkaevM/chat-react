@@ -18,8 +18,12 @@ function Contacts() {
     return contact.fullname.indexOf(filter) > -1;
   });
 
+  const scrollContacts = document.getElementById('contacts');
+
+  scrollContacts.scroll.top = scrollContacts.Height;
+
   return (
-    <div className={style.contacts}>
+    <div className={style.contacts} id="contacts">
       <Form />
       {filteredContacts.map((contact) => {
         return <Contact key={contact._id} contact={contact} />;
