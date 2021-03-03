@@ -4,6 +4,7 @@ import App from './components';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import store from './redux/index';
+import 'font-awesome/css/font-awesome.min.css';
 
 import './index.css';
 
