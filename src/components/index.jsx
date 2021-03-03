@@ -1,6 +1,7 @@
 import { Route } from 'react-router-dom';
 import Contacts from './Contacts';
 import Messages from './Messages';
+import Questionnaire from './Questionnaire';
 
 function App() {
   return (
@@ -9,6 +10,9 @@ function App() {
         <Contacts />
         <Route path="/:id?">
           <Messages />
+        </Route>
+        <Route path="/:id?">
+          <Questionnaire />
         </Route>
       </div>
     </div>
