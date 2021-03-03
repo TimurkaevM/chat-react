@@ -15,12 +15,8 @@ function Contacts() {
   }, []);
 
   const filteredContacts = contacts.filter((contact) => {
-    return contact.fullname.indexOf(filter) > -1;
+    return contact.fullname.toLowerCase().indexOf(filter) > -1;
   });
-
-  const scrollContacts = document.getElementById('contacts');
-
-  scrollContacts.scroll.top = scrollContacts.Height;
 
   return (
     <div className={style.contacts} id="contacts">
