@@ -1,10 +1,21 @@
-.contacts {
-  width: 20%;
-  list-style: none;
-  padding: 30px 20px;
-  margin: 0;
+.sidebar {
+  overflow-x: hidden;
+  overflow-y: scroll;
   height: 100vh;
-  background-color: lightgrey;
+  background-color: rgb(232, 233, 239);
+  width: 20%;
+  padding: 30px 20px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.innerSidebar {
+}
+
+.contacts {
+  margin: 0;
+  background-color: rgb(232, 233, 239);
+  width: 100%;
 }
 
 .contact {
@@ -15,6 +26,7 @@
   align-items: center;
   border-radius: 5px;
   outline: none;
+  margin-bottom: 5px;
 }
 
 .contact:hover {
@@ -58,9 +70,9 @@
 }
 
 .form {
+  width: 100%;
   margin-bottom: 50px;
   font-size: 16px;
-  width: 95%;
   padding: 15px 35px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   color: gray;

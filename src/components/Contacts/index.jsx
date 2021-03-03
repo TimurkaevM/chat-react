@@ -15,15 +15,19 @@ function Contacts() {
   }, []);
 
   const filteredContacts = contacts.filter((contact) => {
-    return contact.fullname.indexOf(filter) > -1;
+    return contact.fullname.toLowerCase().indexOf(filter) > -1;
   });
 
   return (
-    <div className={style.contacts}>
-      <Form />
-      {filteredContacts.map((contact) => {
-        return <Contact key={contact._id} contact={contact} />;
-      })}
+    <div className={style.sidebar} id="contacts">
+      <div className={style.innerSidebar}>
+        <Form />
+        <div className={style.contacts}>
+          {filteredContacts.map((contact) => {
+            return <Contact key={contact._id} contact={contact} />;
+          })}
+        </div>
+      </div>
     </div>
   );
 }
