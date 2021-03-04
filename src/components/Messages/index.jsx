@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import Message from './Message';
 import { useParams } from 'react-router-dom';
 import { getUser } from '../../redux/application';
+import Header from './Header/Header';
 
 function Messages() {
   const params = useParams().id;
@@ -26,6 +27,7 @@ function Messages() {
   }
   return (
     <div className={style.messages}>
+      <Header />
       {messages.map((message) => {
         return <Message key={message._id} message={message} />;
       })}
