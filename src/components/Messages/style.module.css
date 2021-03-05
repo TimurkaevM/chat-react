@@ -1,6 +1,6 @@
 .messages {
   display: flex;
-  width: 80%;
+  flex: 1;
   height: 100vh;
   overflow-y: scroll;
   overflow-x: hidden;
