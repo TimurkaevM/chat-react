@@ -1,9 +1,11 @@
 const LOAD = 'user/load/start';
 const SUCCESS = 'user/load/saccess';
+const OPEN = 'questionnaire/open/success';
 
 const initialState = {
   items: {},
   loading: false,
+  open: true,
 };
 
 export default (state = initialState, action) => {
@@ -18,6 +20,12 @@ export default (state = initialState, action) => {
       return {
         ...state,
         items: action.payLoad,
+      };
+
+    case OPEN:
+      return {
+        ...state,
+        open: !state.open,
       };
 
     default:
@@ -39,5 +47,11 @@ export function getUser() {
           payLoad: json,
         });
       });
+  };
+}
+
+export function openQuestionnaire() {
+  return {
+    type: OPEN,
   };
 }

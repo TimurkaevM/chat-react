@@ -8,10 +8,8 @@ function MediaPage(props) {
       <div className={style['media-title']}>Media</div>
       <div className={style['media-block']}>
         <div className={style['media-item']}>
-          <div className={`material-icons ${style['media-icon']}`}>
-            local_phone
-          </div>
-          <div className={style.text}>kuduzow</div>
+          <div className={style['media-icon']}></div>
+          <div className={style.text}>filename.pdf</div>
         </div>
       </div>
     </div>
