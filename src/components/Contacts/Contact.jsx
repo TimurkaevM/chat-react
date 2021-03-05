@@ -18,7 +18,7 @@ function Contact(props) {
           ''
         )}
       </div>
-      <div>
+      <div className={style.name}>
         {props.contact.fullname}
         <div>
           {props.contact.lastMessage === undefined
@@ -26,6 +26,7 @@ function Contact(props) {
             : props.contact.lastMessage.content}
         </div>
       </div>
+      <div>{dayjs(props.contact.lastMessage.time).format('HH : mm')}</div>
     </NavLink>
   );
 }
