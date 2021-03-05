@@ -78,6 +78,10 @@
   flex: 1;
 }
 
+.profile i {
+  cursor: pointer;
+}
+
 .name {
   display: flex;
   align-items: center;
