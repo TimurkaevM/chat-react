@@ -33,7 +33,7 @@
   background-color: ghostwhite;
   cursor: pointer;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  transition: 0.3s;
+  transition: 0.4s;
 }
 
 .activeContact {
@@ -113,4 +113,16 @@
   top: 8px;
   padding: 6px 8px;
   color: gray;
+}
+
+.ellipsis {
+  display: none;
+}
+
+.contact:hover .ellipsis {
+  display: block;
+}
+
+.contact:hover .time {
+  display: none;
 }
