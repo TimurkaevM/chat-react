@@ -7,13 +7,6 @@ function Message({ message }) {
     return <InfoMessage message={message} />;
   }
   return <MessageChecker message={message} />;
-  // return (
-  //   <div>
-  //     {/*// className={`${style.message} ${*/}
-  //     {/*//   props.message.type === 'info' ? `${style.info_messages}` : ''}`}*/}
-  //     {props.message.content}
-  //   </div>
-  // );
 }
 
 export default Message;
