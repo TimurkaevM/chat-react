@@ -114,3 +114,15 @@
   padding: 6px 8px;
   color: gray;
 }
+
+.ellipsis {
+  display: none;
+}
+
+.contact:hover .ellipsis {
+  display: block;
+}
+
+.contact:hover .time {
+  display: none;
+}

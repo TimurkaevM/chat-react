@@ -26,7 +26,14 @@ function Contact(props) {
             : props.contact.lastMessage.content}
         </div>
       </div>
-      <div>{dayjs(props.contact.lastMessage.time).format('HH : mm')}</div>
+      <div>
+        <div className={style.time}>
+          {dayjs(props.contact.lastMessage.time).format('HH : mm')}
+        </div>
+        <div className={style.ellipsis}>
+          <i className="material-icons">more_horiz</i>
+        </div>
+      </div>
     </NavLink>
   );
 }
