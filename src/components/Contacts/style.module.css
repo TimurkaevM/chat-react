@@ -3,7 +3,7 @@
   overflow-y: scroll;
   height: 100vh;
   background-color: rgb(232, 233, 239);
-  width: 20%;
+  min-width: 350px;
   padding: 30px 20px;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -79,13 +79,12 @@
   position: fixed;
   top: 0px;
   z-index: 1000;
-  width: 20%;
   background-color: rgb(232, 233, 239);
   padding: 5px 0;
+  min-width: 350px;
 }
 
 .form {
-  width: 100%;
   font-size: 16px;
   padding: 15px 35px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -93,6 +92,7 @@
   border: none;
   outline: none;
   border-radius: 5px;
+  width: 100%;
 }
 
 .form:active {
