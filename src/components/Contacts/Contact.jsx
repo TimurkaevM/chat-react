@@ -26,6 +26,7 @@ function Contact(props) {
             : props.contact.lastMessage.content}
         </div>
       </div>
+      <div>{dayjs(props.contact.lastMessage.time).format('HH : mm')}</div>
     </NavLink>
   );
 }
