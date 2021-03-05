@@ -18,7 +18,7 @@ function Contact(props) {
           ''
         )}
       </div>
-      <div>
+      <div className={style.name}>
         {props.contact.fullname}
         <div>
           {props.contact.lastMessage === undefined

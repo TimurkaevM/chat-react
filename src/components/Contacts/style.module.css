@@ -26,6 +26,7 @@
   outline: none;
   margin-bottom: 5px;
   z-index: 1;
+  justify-content: space-between;
 }
 
 .contact:hover {
@@ -39,6 +40,11 @@
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 1;
+}
+
+.name {
+  flex: 1;
+  margin-left: 30px;
 }
 
 .materialIcons {
