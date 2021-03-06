@@ -5,7 +5,7 @@ const OPEN = 'questionnaire/open/success';
 const initialState = {
   items: {},
   loading: false,
-  open: true,
+  open: false,
 };
 
 export default (state = initialState, action) => {

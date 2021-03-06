@@ -19,7 +19,8 @@ body {
   position: relative;
   overflow: hidden;
   margin: auto;
+  width: 100%;
   max-width: 1920px;
   min-width: 100%;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
 }
