@@ -3,7 +3,7 @@
   overflow-y: scroll;
   height: 100vh;
   background-color: rgb(232, 233, 239);
-  min-width: 350px;
+  min-width: 310px;
   padding: 30px 20px;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -45,6 +45,7 @@
 .name {
   flex: 1;
   margin-left: 30px;
+  font-weight: 600;
 }
 
 .materialIcons {
@@ -62,6 +63,8 @@
   text-align: center;
   margin-right: 8px;
   color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .greenCircle {
@@ -81,7 +84,7 @@
   z-index: 1000;
   background-color: rgb(232, 233, 239);
   padding: 5px 0;
-  min-width: 350px;
+  min-width: 310px;
 }
 
 .form {
@@ -133,4 +136,7 @@
 
 .time {
   font-size: 0.8rem;
+}
+
+.avatar {
 }
