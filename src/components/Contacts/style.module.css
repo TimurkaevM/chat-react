@@ -126,3 +126,11 @@
 .contact:hover .time {
   display: none;
 }
+
+.lastMessage {
+  color: rgb(128, 128, 128);
+}
+
+.time {
+  font-size: 0.8rem;
+}
