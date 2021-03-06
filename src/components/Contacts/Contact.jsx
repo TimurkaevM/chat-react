@@ -20,7 +20,7 @@ function Contact(props) {
       </div>
       <div className={style.name}>
         {props.contact.fullname}
-        <div>
+        <div className={style.lastMessage}>
           {props.contact.lastMessage === undefined
             ? ''
             : props.contact.lastMessage.content}
