@@ -11,15 +11,14 @@ function Contact(props) {
       className={style.contact}
       activeClassName={style.activeContact}
     >
-      {/*<div className={style.circle}>*/}
-      {/*  {props.contact.fullname[0]}*/}
-      {/*  {props.contact.online === true ? (*/}
-      {/*    <div className={style.greenCircle}></div>*/}
-      {/*  ) : (*/}
-      {/*    ''*/}
-      {/*  )}*/}
-      {/*</div>*/}
-      <Avatar size="medium" />
+      <Avatar size="medium">
+        {props.contact.fullname[0] === '' ? '' : props.contact.fullname[0]}
+        {props.contact.online === true ? (
+          <div className={style.greenCircle}></div>
+        ) : (
+          ''
+        )}
+      </Avatar>
       <div className={style.name}>
         {props.contact.fullname}
         <div className={style.lastMessage}>
