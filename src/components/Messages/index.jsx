@@ -9,6 +9,7 @@ import { getUser } from '../../redux/application';
 import Header from './Header/Header';
 
 function Messages() {
+  const messageFilter = useSelector((state) => state.messages.messageFilter);
   const params = useParams().id;
   const messages = useSelector((state) => state.messages.items);
   const loading = useSelector((state) => state.messages.loading);
@@ -22,13 +23,20 @@ function Messages() {
     }
   }, [params]);
 
+  // const filteredMessages = messages
+  //   .filter(message=> message._id === params)
+  //   .filter(message => message.content.toLowerCase().indexOf(messageFilter) > -1)
+  const filteredMessages = messages.filter((message) => {
+    return message.content.indexOf(messageFilter) > -1;
+  });
+
   if (loading) {
     return <div>loading messages...</div>;
   }
   return (
     <div className={style.messages}>
       <Header />
-      {messages.map((message) => {
+      {filteredMessages.map((message) => {
         return <Message key={message._id} message={message} />;
       })}
     </div>

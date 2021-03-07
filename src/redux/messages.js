@@ -1,6 +1,7 @@
 const initialState = {
   items: [],
   loading: false,
+  messageFilter: '',
 };
 
 export default (state = initialState, action) => {
@@ -16,6 +17,12 @@ export default (state = initialState, action) => {
         ...state,
         items: action.payload,
         loading: false,
+      };
+
+    case 'set/messageFilter':
+      return {
+        ...state,
+        messageFilter: action.payload,
       };
     default:
       return state;
@@ -37,5 +44,12 @@ export const loadMessages = (id, myId) => {
           payload: json,
         });
       });
+  };
+};
+
+export const setMessagesFilter = (messageFilter) => {
+  return {
+    type: 'set/messageFilter',
+    payload: messageFilter,
   };
 };

@@ -1,13 +1,14 @@
 import React from 'react';
+import Avatar from '../Avatar';
 
 import style from './style.module.css';
 
 function UserPage(props) {
   return (
     <div className={style.user}>
-      <div className={style['user-avatar']}>
+      <Avatar size="large" margin="0 auto">
         {props.user.fullname[0] === '' ? '' : props.user.fullname[0]}
-      </div>
+      </Avatar>
       <div className={style['user-name']}>
         {props.user.fullname === '' ? 'Not found' : props.user.fullname}
       </div>

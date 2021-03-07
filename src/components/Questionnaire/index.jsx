@@ -4,27 +4,27 @@ import { useSelector } from 'react-redux';
 import UserPage from './UserPage';
 import SocialPage from './SocialPage';
 import MediaPage from './MediaPage';
-import SocialErorPage from './SocialErorPage';
+import SocialErrorPage from './SocialErrorPage';
 
 import style from './style.module.css';
 
 function Questionnaire(props) {
   const id = useParams().id;
   const users = useSelector((state) => state.contacts.items);
+  const open = useSelector((state) => state.application.open);
   const userFinded = users.find((user) => id === user._id);
-  console.log(userFinded);
 
   if (userFinded === undefined) {
-    return <div></div>;
+    return null;
   }
 
   return (
-    <div className={style.main}>
+    <div className={`${style.main} ${open ? style.open : ''}`}>
       <div className={style['main-outside']}>
         <div className={style.content}>
           <UserPage user={userFinded} />
           {userFinded.socials === undefined ? (
-            <SocialErorPage />
+            <SocialErrorPage />
           ) : (
             <SocialPage user={userFinded} />
           )}
