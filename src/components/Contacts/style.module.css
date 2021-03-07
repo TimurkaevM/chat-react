@@ -137,6 +137,7 @@
 
 .lastMessageContent {
   margin-left: 5px;
+  font-size: 13px;
 }
 
 .time {
@@ -144,5 +145,5 @@
 }
 
 .done {
-  font-size: 12px;
+  font-size: 13px;
 }
