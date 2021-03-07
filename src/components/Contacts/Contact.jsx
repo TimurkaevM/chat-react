@@ -21,9 +21,18 @@ function Contact(props) {
       <div className={style.name}>
         {props.contact.fullname}
         <div className={style.lastMessage}>
-          {props.contact.lastMessage === undefined
-            ? ''
-            : props.contact.lastMessage.content}
+          <span>
+            {props.contact.lastMessage === true ? (
+              <i className="material-icons">done_all</i>
+            ) : (
+              <i className={`material-icons ${style.done}`}>done</i>
+            )}
+          </span>
+          <span className={style.lastMessageContent}>
+            {props.contact.lastMessage === undefined
+              ? ''
+              : props.contact.lastMessage.content}
+          </span>
         </div>
       </div>
       <div>
