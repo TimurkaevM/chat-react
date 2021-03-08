@@ -132,11 +132,18 @@
 
 .lastMessage {
   color: rgb(128, 128, 128);
+  align-items: center;
+}
+
+.lastMessageContent {
+  margin-left: 5px;
+  font-size: 13px;
 }
 
 .time {
   font-size: 0.8rem;
 }
 
-.avatar {
+.done {
+  font-size: 13px;
 }

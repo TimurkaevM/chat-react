@@ -2,6 +2,7 @@ import React from 'react';
 import style from './style.module.css';
 import { NavLink } from 'react-router-dom';
 import dayjs from 'dayjs';
+import Avatar from '../Avatar';
 
 function Contact(props) {
   return (
@@ -10,20 +11,29 @@ function Contact(props) {
       className={style.contact}
       activeClassName={style.activeContact}
     >
-      <div className={style.circle}>
-        {props.contact.fullname[0]}
+      <Avatar size="medium">
+        {props.contact.fullname[0] === '' ? '' : props.contact.fullname[0]}
         {props.contact.online === true ? (
           <div className={style.greenCircle}></div>
         ) : (
           ''
         )}
-      </div>
+      </Avatar>
       <div className={style.name}>
         {props.contact.fullname}
         <div className={style.lastMessage}>
-          {props.contact.lastMessage === undefined
-            ? ''
-            : props.contact.lastMessage.content}
+          <span>
+            {props.contact.lastMessage === true ? (
+              <i className="material-icons">done_all</i>
+            ) : (
+              <i className={`material-icons ${style.done}`}>done</i>
+            )}
+          </span>
+          <span className={style.lastMessageContent}>
+            {props.contact.lastMessage === undefined
+              ? ''
+              : props.contact.lastMessage.content}
+          </span>
         </div>
       </div>
       <div>
