@@ -9,6 +9,7 @@ function Contacts() {
   const contacts = useSelector((state) => state.contacts.items);
   const dispatch = useDispatch();
   const filter = useSelector((state) => state.contacts.filter);
+  const loading = useSelector((state) => state.contacts.loading);
 
   useEffect(() => {
     dispatch(loadContacts());
