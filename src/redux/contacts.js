@@ -15,6 +15,7 @@ export default (state = initialState, action) => {
     case 'contacts/load/success':
       return {
         ...state,
+        loading: false,
         items: action.payload,
       };
 
