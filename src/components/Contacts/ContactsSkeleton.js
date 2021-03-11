@@ -8,10 +8,10 @@ function ContactsSkeleton(props) {
     return (
       <div className={style.skeletonContacts}>
         <div className={style.skeletonAvatar}>
-          <Skeleton height={100} width={100} />
+          <Skeleton height={100} width={100} key={index} />
         </div>
         <div className={style.skeletonContact}>
-          <Skeleton count={2} />
+          <Skeleton count={2} key={index} />
         </div>
       </div>
     );

@@ -5,6 +5,7 @@ import { loadContacts } from '../../redux/contacts';
 import Contact from './Contact';
 import Form from './Form';
 import ContactsSkeleton from './ContactsSkeleton';
+import PropTypes from 'prop-types';
 
 function Contacts() {
   const contacts = useSelector((state) => state.contacts.items);
@@ -40,5 +41,9 @@ function Contacts() {
     </div>
   );
 }
+
+Contacts.propTypes = {
+  contact: PropTypes.object,
+};
 
 export default Contacts;
