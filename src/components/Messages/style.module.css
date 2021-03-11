@@ -29,8 +29,14 @@
   color: #000;
 }
 
-.incoming_messages {
+.incoming_parent {
+  margin: 10px 10px;
+  display: flex;
   align-self: flex-start;
+  max-width: 70%;
+}
+
+.incoming_messages {
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
   background-color: whitesmoke;
   border-radius: 20px 20px 20px 0;
@@ -158,4 +164,17 @@
   font-weight: 600;
   color: inherit;
   text-align: end;
+}
+
+.small_avatar {
+  background-color: cornflowerblue;
+  align-self: flex-end;
+  font-size: 15px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 100px;
+  text-align: center;
+  margin-right: 8px;
+  color: white;
 }
