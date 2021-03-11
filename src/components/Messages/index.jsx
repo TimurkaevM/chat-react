@@ -7,13 +7,14 @@ import Message from './Message';
 import { useParams } from 'react-router-dom';
 import { getUser } from '../../redux/application';
 import Header from './Header/Header';
+import MessagesPreloader from './MessagesPreloader';
 
 function Messages() {
   const messageFilter = useSelector((state) => state.messages.messageFilter);
   const params = useParams().id;
   const messages = useSelector((state) => state.messages.items);
   const loading = useSelector((state) => state.messages.loading);
-  const myId = useSelector((state) => state.application.items);
+  const myId = useSelector((state) => state.application.items._id);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -23,9 +24,6 @@ function Messages() {
     }
   }, [params]);
 
-  // const filteredMessages = messages
-  //   .filter(message=> message._id === params)
-  //   .filter(message => message.content.toLowerCase().indexOf(messageFilter) > -1)
   const filteredMessages = messages.filter((message) => {
     return message.content.indexOf(messageFilter) > -1;
   });
@@ -33,6 +31,11 @@ function Messages() {
   if (loading) {
     return <div>loading messages...</div>;
   }
+
+  if (!params) {
+    return <MessagesPreloader />;
+  }
+
   return (
     <div className={style.messages}>
       <Header />
