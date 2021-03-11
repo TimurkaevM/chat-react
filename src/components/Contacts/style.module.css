@@ -147,3 +147,23 @@
 .done {
   font-size: 13px;
 }
+
+.skeletonContacts {
+  align-items: center;
+  width: 90%;
+  justify-content: space-between;
+  display: flex;
+  padding: 10px 10px;
+}
+
+.skeletonAvatar {
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.skeletonContact {
+  width: 200px;
+}

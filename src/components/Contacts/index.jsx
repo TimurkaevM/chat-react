@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { loadContacts } from '../../redux/contacts';
 import Contact from './Contact';
 import Form from './Form';
+import ContactsSkeleton from './ContactsSkeleton';
 
 function Contacts() {
   const contacts = useSelector((state) => state.contacts.items);
@@ -27,9 +28,13 @@ function Contacts() {
       <div className={style.innerSidebar}>
         <Form />
         <div className={style.contacts}>
-          {filteredContacts.map((contact) => {
-            return <Contact key={contact._id} contact={contact} />;
-          })}
+          {loading ? (
+            <ContactsSkeleton />
+          ) : (
+            filteredContacts.map((contact) => {
+              return <Contact key={contact._id} contact={contact} />;
+            })
+          )}
         </div>
       </div>
     </div>
