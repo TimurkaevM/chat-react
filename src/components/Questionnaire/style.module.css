@@ -88,8 +88,10 @@
 }
 .social-item:hover {
   background-color: rgb(230, 230, 230);
-  transition: 0.5s;
+  background-position: 50%;
+  transition: background 0.7s;
 }
+
 .social-icon {
   color: #7d7c7c;
   margin-right: 10px;
