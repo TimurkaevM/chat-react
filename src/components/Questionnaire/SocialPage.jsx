@@ -1,5 +1,6 @@
 import React from 'react';
 import SocialItem from './SocialItem';
+import PropTypes from 'prop-types';
 
 import style from './style.module.css';
 
@@ -27,5 +28,11 @@ function SocialPage(props) {
     </div>
   );
 }
+
+SocialPage.propTypes = {
+  instagram: PropTypes.string,
+  twitter: PropTypes.string,
+  facebook: PropTypes.string,
+};
 
 export default SocialPage;
