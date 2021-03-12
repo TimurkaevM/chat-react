@@ -167,14 +167,26 @@
 }
 
 .small_avatar {
-  background-color: cornflowerblue;
   align-self: flex-end;
-  font-size: 15px;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  border-radius: 100px;
-  text-align: center;
-  margin-right: 8px;
-  color: white;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+}
+
+.loading i {
+  animation-name: rotation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

@@ -8,6 +8,7 @@ import { useParams } from 'react-router-dom';
 import { getUser } from '../../redux/application';
 import Header from './Header/Header';
 import MessagesPreloader from './MessagesPreloader';
+import Loading from './Loading';
 
 function Messages() {
   const messageFilter = useSelector((state) => state.messages.messageFilter);
@@ -27,10 +28,6 @@ function Messages() {
   const filteredMessages = messages.filter((message) => {
     return message.content.indexOf(messageFilter) > -1;
   });
-
-  if (loading) {
-    return <div>loading messages...</div>;
-  }
 
   if (!params) {
     return <MessagesPreloader />;
