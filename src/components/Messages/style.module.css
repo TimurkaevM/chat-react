@@ -9,6 +9,17 @@
   position: relative;
 }
 
+.message_block {
+  display: flex;
+  flex: 1;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex-direction: column;
+  scrollbar-width: none;
+  position: relative;
+  margin-top: 52px;
+}
 .message {
   align-self: flex-end;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
