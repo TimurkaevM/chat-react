@@ -1,5 +1,6 @@
 import React from 'react';
 import Avatar from '../Avatar';
+import PropTypes from 'prop-types';
 
 import style from './style.module.css';
 
@@ -29,5 +30,10 @@ function UserPage(props) {
     </div>
   );
 }
+
+UserPage.propTypes = {
+  fullname: PropTypes.string,
+  username: PropTypes.string,
+};
 
 export default UserPage;

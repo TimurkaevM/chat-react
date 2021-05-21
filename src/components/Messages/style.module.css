@@ -1,14 +1,19 @@
 .messages {
+  flex: 1;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.message_block {
   display: flex;
   flex: 1;
   height: 100vh;
   overflow-y: scroll;
-  overflow-x: hidden;
   flex-direction: column;
   scrollbar-width: none;
   position: relative;
+  margin-top: 52px;
 }
-
 .message {
   align-self: flex-end;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
@@ -29,8 +34,14 @@
   color: #000;
 }
 
-.incoming_messages {
+.incoming_parent {
+  margin: 10px 10px;
+  display: flex;
   align-self: flex-start;
+  max-width: 70%;
+}
+
+.incoming_messages {
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
   background-color: whitesmoke;
   border-radius: 20px 20px 20px 0;
@@ -40,6 +51,7 @@
 }
 
 .header {
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   position: absolute;
@@ -117,4 +129,69 @@
   border: none;
   outline: none;
   border-radius: 5px;
+}
+
+.massage_input {
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.lower_input {
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  border: none;
+  outline: none;
+  justify-content: space-around;
+  height: auto;
+  padding: 10px 5px;
+  width: inherit;
+  align-self: center;
+}
+
+.preloader {
+  flex: 3;
+  display: flex;
+}
+
+.no_chat_selected {
+  background-color: whitesmoke;
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: 600;
+  margin: auto;
+}
+
+.date {
+  display: flex;
+  font-size: 10px;
+  font-weight: 600;
+  color: inherit;
+  text-align: end;
+}
+
+.small_avatar {
+  align-self: flex-end;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+}
+
+.loading i {
+  animation-name: rotation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
