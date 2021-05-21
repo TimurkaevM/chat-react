@@ -16,7 +16,7 @@ function IncomingMessages({ message }) {
   return (
     <div className={style.incoming_parent}>
       <div className={style.small_avatar}>
-        <Avatar size="small">{avatar.fullname[0]}</Avatar>
+        <Avatar size="small">{avatar?.fullname[0]}</Avatar>
       </div>
       <div className={style.incoming_messages}>
         {message.content}

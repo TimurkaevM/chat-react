@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { loadMessages } from '../../redux/messages';
 import { useEffect } from 'react';
 import Message from './Message';
+import MessageForm from './MessageForm';
 import { useParams } from 'react-router-dom';
 import { getUser } from '../../redux/application';
 import Header from './Header/Header';
@@ -40,6 +41,7 @@ function Messages() {
           return <Message key={message._id} message={message} />;
         })}
       </div>
+      <MessageForm />
     </div>
   );
 }

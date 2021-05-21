@@ -1,6 +1,6 @@
 .messages {
   flex: 1;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   position: relative;
 }
 
@@ -185,6 +185,45 @@
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+}
+
+.message-form {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  bottom: 0;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.message-input {
+  width: 88%;
+  padding: 20px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+}
+
+.message-input:focus {
+  outline: none;
+  border: none;
+}
+
+.icon-file {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.icon-file:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+  transition: 0.4s;
 }
 
 @keyframes rotation {
