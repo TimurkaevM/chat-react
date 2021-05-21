@@ -35,7 +35,7 @@ export default (state = initialState, action) => {
     case 'messages/added/success':
       return {
         ...state,
-        items: [...state.items, action.payload],
+        items: state.items.push(action.payload),
         loadingMessage: false,
       };
 
