@@ -4,6 +4,7 @@
   height: 100vh;
   background-color: rgb(232, 233, 239);
   min-width: 310px;
+  max-width: 310px;
   padding: 30px 20px;
   -ms-overflow-style: none;
   scrollbar-width: none;
