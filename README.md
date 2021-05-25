@@ -19,16 +19,13 @@
 
 <ul>
   <li>
-    ReactJs
+    React
   </li>
   <li>
     Redux
   </li>
   <li>
-    react-router-dom
-  </li>
-  <li>
-    react-loading-skeleton
+    React-router
   </li>
 </ul>
 
@@ -42,7 +39,7 @@
     <a href="https://github.com/sirykey">Бадургов Рамзан</a> (вывод и поиск сообщений)
   </li>
   <li>
-    <a href="https://github.com/TimurkaevM">Тимуркаев Магомед</a> (общие компоненты, анкета и добавление сообщений)
+    <a href="https://github.com/TimurkaevM">Тимуркаев Магомед</a> (team-lead, общие компоненты и стили, анкета и добавление сообщений, создание и слияние веток git)
   </li>
 </ul>
 
