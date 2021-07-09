@@ -32,7 +32,7 @@ function Contact(props) {
           <span className={style.lastMessageContent}>
             {props.contact.lastMessage === undefined
               ? ''
-              : props.contact.lastMessage.content}
+              : props.contact.lastMessage.content.slice(0, 8) + '...'}
           </span>
         </div>
       </div>

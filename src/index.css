@@ -13,12 +13,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 .messeger {
-  display: flex;
   height: 100vh;
   position: relative;
   overflow: hidden;
+  justify-content: space-between;
   margin: auto;
   width: 100%;
-  max-width: 1920px;
-  min-width: 100%;
+  display: flex;
 }

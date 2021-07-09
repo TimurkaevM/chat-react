@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { addedMessages } from '../../redux/messages';
@@ -15,15 +15,16 @@ function MessageForm() {
   const myId = useSelector((state) => state.application.items._id);
 
   const contactId = useParams().id;
-  const changeMessage = (e) => {
-    setMessage(e.target.value);
-  };
 
-  const handleAddedMessage = () => {
+  const handleAddedMessage = useCallback(() => {
     if (message.length !== 0) {
       dispatch(addedMessages(myId, contactId, message));
       setMessage('');
     }
+  }, [message, dispatch, myId, contactId]);
+
+  const changeMessage = (e) => {
+    setMessage(e.target.value);
   };
 
   return (

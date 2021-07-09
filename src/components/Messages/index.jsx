@@ -18,16 +18,16 @@ function Messages() {
   const myId = useSelector((state) => state.application.items._id);
   const dispatch = useDispatch();
 
+  const filteredMessages = messages.filter((message) => {
+    return message.content.indexOf(messageFilter) > -1;
+  });
+
   useEffect(() => {
     if (params !== undefined) {
       dispatch(loadMessages(params, myId));
       dispatch(getUser());
     }
-  }, [params]);
-
-  const filteredMessages = messages.filter((message) => {
-    return message.content.indexOf(messageFilter) > -1;
-  });
+  }, [params, dispatch, myId]);
 
   if (!params) {
     return <MessagesPreloader />;
@@ -36,7 +36,7 @@ function Messages() {
   return (
     <div className={style.messages}>
       <Header />
-      <div className={style.message_block}>
+      <div className={style.message_block} id="#scroll">
         {filteredMessages.map((message) => {
           return <Message key={message._id} message={message} />;
         })}

@@ -1,14 +1,19 @@
 .main {
-  min-width: 300px;
+  width: 0;
   height: 100vh;
   background-color: rgb(232, 233, 239);
   overflow: hidden;
   box-sizing: border-box;
-  margin-right: -300px;
   transition: 0.6s;
+  transform-origin: right;
+  width: 0;
+  transform: scaleX(0);
 }
 .open {
-  margin-right: 0;
+  transform-origin: right;
+  transform: scaleX(1);
+  overflow-y: scroll;
+  width: 20%;
 }
 .main-outside {
   width: 100%;

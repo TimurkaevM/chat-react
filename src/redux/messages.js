@@ -1,3 +1,5 @@
+import { scrollChat } from '../components/scrollChat';
+
 const initialState = {
   items: [],
   loading: false,
@@ -29,13 +31,26 @@ export default (state = initialState, action) => {
     case 'messages/added/start':
       return {
         ...state,
+        items: [...state.items, { ...action.payload, sending: true }],
         loadingMessage: true,
       };
 
     case 'messages/added/success':
       return {
         ...state,
-        items: state.items.push(action.payload),
+        items: state.items
+          .map((item) => {
+            if (item.requestId === action.payload.requestId) {
+              return {
+                ...action.payload,
+                sending: false,
+              };
+            }
+            return item;
+          })
+          .filter((item) => {
+            return item.content !== undefined;
+          }),
         loadingMessage: false,
       };
 
@@ -49,6 +64,7 @@ export const loadMessages = (id, myId) => {
     dispatch({
       type: 'messages/load/start',
     });
+
     fetch(
       `https://api.intocode.ru:8001/api/messages/5f2ea3801f986a01cefc8bcd/${id}`,
     )
@@ -58,6 +74,7 @@ export const loadMessages = (id, myId) => {
           type: 'messages/load/success',
           payload: json,
         });
+        scrollChat();
       });
   };
 };
@@ -70,9 +87,18 @@ export const setMessagesFilter = (messageFilter) => {
 };
 
 export const addedMessages = (myId, contactId, message) => {
+  const requestId = Math.random();
+
   return (dispatch) => {
     dispatch({
       type: 'messages/added/start',
+      payload: {
+        myId: myId,
+        contactId: contactId,
+        type: 'text',
+        content: message,
+        requestId: requestId,
+      },
     });
 
     fetch('https://api.intocode.ru:8001/api/messages', {
@@ -91,8 +117,9 @@ export const addedMessages = (myId, contactId, message) => {
       .then((json) => {
         dispatch({
           type: 'messages/added/success',
-          payload: json,
+          payload: { ...json, requestId: requestId },
         });
+        scrollChat();
       }).catch = (e) => {
       console.log(e);
     };

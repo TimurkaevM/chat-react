@@ -3,9 +3,19 @@
   overflow-y: scroll;
   height: 100vh;
   background-color: rgb(232, 233, 239);
-  min-width: 310px;
-  max-width: 310px;
-  padding: 30px 20px;
+  width: 23%;
+  min-width: 23%;
+  padding: 0 20px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.sidebar {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -14,7 +24,7 @@
   margin: 0;
   background-color: rgb(232, 233, 239);
   width: 100%;
-  padding-top: 70px;
+  padding-top: 30px;
 }
 
 .contact {
@@ -80,12 +90,11 @@
 }
 
 .formContainer {
-  position: fixed;
-  top: 0px;
   z-index: 1000;
+  padding: 20px 0;
+  position: sticky;
+  top: 0.1px;
   background-color: rgb(232, 233, 239);
-  padding: 5px 0;
-  min-width: 310px;
 }
 
 .form {
